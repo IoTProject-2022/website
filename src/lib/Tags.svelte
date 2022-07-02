@@ -1,12 +1,16 @@
 <script>
     export let serviceList;
     const tags = [ 'Bathroom', 'Other Services' ]
+    const tagId = {
+        'Bathroom': 'bathroom',
+        'Other Services': 'other'
+    }
 </script>
 
 <div class="tags columns">
 {#each tags as tag}
     <span class="tag column col-auto chip text-large bg-dark text-light">
-        <button on:click={() => serviceList.Display(tag)} class="btn btn-link text-light">{tag}</button>
+        <button on:click={() => serviceList.Display(tagId[tag])} class="btn btn-link text-light">{tag}</button>
     </span>
 {/each}
 </div>

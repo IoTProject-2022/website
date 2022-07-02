@@ -3,6 +3,7 @@ import Map from "./lib/Map.svelte";
 import Navbar from "./lib/Navbar.svelte";
 import Tags from "./lib/Tags.svelte";
 import ServiceList from "./lib/ServiceList.svelte";
+import MoreInfo from "./lib/MoreInfo.svelte";
 
 let map, serviceList;
 

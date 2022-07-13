@@ -33,7 +33,7 @@
 
     function update()
     {
-        const url = `http://127.0.0.1:8010/proxy/~/in-cse/in-name/test/${service.id}/la`;
+        const url = `http://127.0.0.1:8010/proxy/~/in-cse/in-name/data/${service.id}/la`;
         const header = {
             'X-M2M-Origin': 'admin:admin',
             'Content-type': 'application/json',
@@ -79,7 +79,12 @@
     }
 
     onMount(() => {
-        const url = `http://127.0.0.1:8010/proxy/~/in-cse/in-name/test/${service.id}/?rcn=4`;
+        if(service.id == "acfa26c7")
+        {
+            service.stalls = "2"
+        }
+
+        const url = `http://127.0.0.1:8010/proxy/~/in-cse/in-name/data/${service.id}/?rcn=4`;
         const header = {
             'X-M2M-Origin': 'admin:admin',
             'Content-type': 'application/json',

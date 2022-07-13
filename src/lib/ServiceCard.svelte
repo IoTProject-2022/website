@@ -37,12 +37,13 @@
         }).then((res) => {
             res.json().then((json) => {
                 let value = JSON.parse(json["m2m:cin"]["con"])
+                console.log(value)
                 if(value["users"].length >= service.stalls)
                 {
                     canBook = false;
                 }
-                canBook = canBook && !value["users"].includes(service.id);
-                canOpen = value["users"].includes(service.id);
+                canBook = canBook && !value["users"].includes("bhv");
+                canOpen = value["users"].includes("bhv");
             });
         });
     }
